@@ -109,7 +109,9 @@ for char in chars:
                             break
 
 
-# 773 < Ans < 1638                   
+# 773 < Ans < 1638         
+# Ans = 861 (?)
+          
                         
                 
 

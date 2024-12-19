@@ -29,10 +29,12 @@ response = str(response)
 
 
 #%% Problem 1
+
 import itertools
 
 equations = response.split("\n")
 
+# Function to convert a string list to a integer list
 def stringlist2intlist(series):
     series_list = []
     for string in series:
@@ -43,17 +45,23 @@ def stringlist2intlist(series):
 
 count = 0
 
+# Iterate through the equations
 for equation in equations: 
     if equation != '':
+        # Split into the correct part
         split = equation.split(":")
         ans = int(split[0])
         numbers = split[1].split(" ")
         numbers = stringlist2intlist(numbers)
         
-
+        # Possible number of combinations of + and x
         operation_poss_len = len(numbers)-1
+        
+        # Every possible combination of products
         operations_poss = itertools.product(["+","*"], repeat = operation_poss_len)
         valid = False
+        
+        # Perform every operation combination and see if it returns the desired amount
         for operations in operations_poss:
 
             result = numbers[0]
@@ -75,6 +83,7 @@ for equation in equations:
 
 #%% Problem 2
 
+# Introduce a new operation of two numbers
 def concatnum(a,b):
     a = str(a)
     b = str(b)
@@ -83,6 +92,8 @@ def concatnum(a,b):
     return(c)
 
 count = 0
+
+# This is the same but with a new operation introduced
 
 for equation in equations: 
     if equation != '':
