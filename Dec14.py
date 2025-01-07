@@ -135,7 +135,8 @@ for t in range(room_x * room_y):
                 if seconds == 6668:
                     grid = return_grid(robots, room_x, room_y,True)
 
-        
+                    
 
 
-# Ans > 6667
+
+# Ans = 6668
